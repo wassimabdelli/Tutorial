@@ -1,0 +1,29 @@
+
+<body>
+    <div class="container">
+        <div class="main">  	
+            <input type="checkbox" id="chk" aria-hidden="true">
+    
+            <div class="login">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Log in</label>
+                    <input class="input" type="email" name="email" placeholder="Email" [(ngModel)] = "email" >
+                    <input class="input" type="password" name="pswd" placeholder="Password" [(ngModel)] = "password" >
+                    <button (click)="login()" >Log in</button>
+                </form>
+            </div>
+    
+            <div class="register">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Register</label>
+                    <input class="input" type="text" name="Name" placeholder="Name"  [(ngModel)] = "name"  >
+                    <input class="input" type="text" name="LastName" placeholder="LastName" [(ngModel)] = "LastName" >
+                    <input class="input" type="date" name="DateBirth" [(ngModel)] = "DateBrit" >
+                    <input class="input" type="email" name="email" placeholder="Email" [(ngModel)] = "email"  >
+                    <input class="input" type="password" name="pswd" placeholder="Password" [(ngModel)] = "password"  >
+                    <button (click)="register()" >Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

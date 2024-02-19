@@ -1,0 +1,7 @@
+<input type="file" (change)="uploadFile($event)">
+
+<ul>
+    <li *ngFor="let file of filesArray">
+      {{ file.name }}
+    </li>
+  </ul>

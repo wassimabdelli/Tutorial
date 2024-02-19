@@ -1,0 +1,25 @@
+<div class="container">
+
+<h1> Upadate form </h1> 
+
+<form  #taskForm="ngForm">
+    <div class="form-group">
+
+        <label for="nameTask">Task</label>
+            <input type="text" class="form-control"  ngModel name="nameTask"  [(ngModel)] = param1    >
+
+        <label for="task">date</label>
+        <input type="date" class="form-control" id="task"  ngModel name="task"  [(ngModel)] = date>
+        
+        
+    </div>
+<br>
+    <button [disabled]="taskForm.invalid" (click)="update( param3 , param1 , date )"  id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+</form>
+param2 : {{ param2 }} <br>
+param3 :  {{param3}} <br>
+date :  {{date}} <br>
+<br>
+</div>
+
+

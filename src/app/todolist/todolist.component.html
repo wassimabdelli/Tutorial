@@ -1,0 +1,54 @@
+
+<div class="container">
+
+    <h1>To-Do List</h1>
+
+    <hr>
+    <form  #taskForm="ngForm">
+        <div class="form-group">
+            <label for="task">Task</label>
+            <input type="text" class="form-control"  id="task" placeholder="Enter task" ngModel name="task"  [(ngModel)] = "task">
+           
+            
+        </div>
+
+        <button [disabled]="taskForm.invalid" (click)="addTask()"    id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <hr>
+
+    <table class="table table-dark table-striped" >
+        <thead>
+            <tr>
+                <td >Task</td>
+                <td >Date</td>
+               <td>Update</td>
+         <td>Delete</td>
+         <td>IDoc</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of tasksList ; index as i ">
+                <td>{{t.nom}}</td>
+               
+               <td>{{t.date.toDate() | date:('dd/MM/yyyy')}}</td>
+               <td>  <button (click)="update( t.nom , t.date.toDate() , docId[i]  )" class="btn btn-warning"  type="button" >Update</button> </td>
+               <td> <button (click)="delete(i)" class="btn btn-danger">Delete</button> </td>
+             <td> {{ docId[i] }}</td>
+            </tr>
+
+        </tbody>
+        
+    </table> 
+
+
+    
+    <button (click)="toupload()" type="submit" class="btn btn-info" > upload my Img </button> <br>
+
+    <button (click)="toFileGestion()" type="submit" class="btn btn-info" > Gestion Files </button>
+</div>
+
+
+
+
+
