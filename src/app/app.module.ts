@@ -28,7 +28,7 @@ import { GestionfilesComponent } from './gestionfiles/gestionfiles.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase, 'Myblog'),
+    AngularFireModule.initializeApp(environment.firebase, 'MyBlog'),
     FormsModule
     
   ],
